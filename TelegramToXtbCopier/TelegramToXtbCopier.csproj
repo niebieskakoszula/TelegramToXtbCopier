@@ -62,4 +62,14 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="libs\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="xAPI">
+	    <HintPath>libs\xAPI.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+
 </Project>
