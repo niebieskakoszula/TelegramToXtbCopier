@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mct:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TelegramToXtbCopier.VerificationCodePopup"
+	         xmlns:mct="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
+		   CanBeDismissedByTappingOutsideOfPopup="False">
+	<Grid Padding="10" HeightRequest="180" BackgroundColor="#1a1625">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="300"/>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+		<Label  Grid.Row="1"
+            Text="Podaj kod weryfikacyjny:"
+            VerticalOptions="Center"
+			FontSize="Subtitle"
+			HorizontalOptions="Center"
+			TextColor="White"/>
+		<Entry Grid.Row="2"
+			x:Name="CodeEntry"
+			HorizontalOptions="Fill"
+			TextChanged="Entry_TextChanged"
+			HorizontalTextAlignment="Center"
+			TextColor="White"/>
+		<Grid Padding="10" Grid.Row="3" WidthRequest="300">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="Auto"/>
+			</Grid.ColumnDefinitions>
+			<Button 
+				Grid.Column="0"
+				x:Name="ConfirmButton"
+				Text="Zatwierdź"
+				Clicked="OnConfirmButtonClicked"
+				BackgroundColor="Green"
+				TextColor="White"
+				IsEnabled="False"
+				HorizontalOptions="Fill"
+				WidthRequest="120"/>
+			<Button 
+				Grid.Column="2"
+				Text="Anuluj"
+				Clicked="OnCancelButtonClicked"
+				BackgroundColor="Red"
+				TextColor="White"
+				HorizontalOptions="EndAndExpand"
+				WidthRequest="120"/>
+		</Grid>
+	</Grid>
+</mct:Popup>
